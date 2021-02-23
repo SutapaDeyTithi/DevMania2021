@@ -1,4 +1,11 @@
 # DevMania2021
+/***************** READ ****************/
+1. https://drive.google.com/drive/folders/1dTVyjlP8vmAFKzCeXYuAgeFFZ2G3k-Yd?usp=sharing (this code'll be required)
+2. Go to the "_practice_" folder
+3. Follow the steps in "readme.txt" file to start from **scratch** 
+
+
+
 This folder contains practice and final project for the hackathon.
 
 Practice folder is for understanding the basics first.
