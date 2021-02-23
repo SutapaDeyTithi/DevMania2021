@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 1. back end:
+=======
+1. front end:
+	a. create-react-app appname
+	b. npm start
+	c. watch videos from folder 19 (zero to mastery)
+2. back end:
+>>>>>>> 9349eae07676fc031d176dd7037dd81a988575f6
 	a. npm init -y
 	b. npm install nodemon --save-dev
 	c. go to package.json
@@ -9,6 +17,7 @@
 	d. create index.js file in the same folder where package.json resides
 	e. in cmd prompt, run:
 		> npm start
+<<<<<<< HEAD
 	f. npm install express
 	   npm install body-parser
 	   npm install cors
@@ -36,3 +45,6 @@
 	f. npm start
 
 	z. watch videos from folder 19 (zero to mastery).
+=======
+	f. now watch videos from folder 24, video no 08 (zero to mastery)
+>>>>>>> 9349eae07676fc031d176dd7037dd81a988575f6
