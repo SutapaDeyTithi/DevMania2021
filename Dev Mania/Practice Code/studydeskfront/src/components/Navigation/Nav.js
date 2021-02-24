@@ -14,10 +14,10 @@ const Nav = ({ onRouteChange, isSignedIn }) => {
                 <a href="#">Home</a>
               </li>
               <li>
-                <a href="#">Stories</a>
+                <a href="#">Level/Term</a>
                 <ul class="sub">
-                  <li><a href="#">Others' Story</a></li>
-                  <li><a href="#">Share your Story</a></li>
+                  <li><a href="#">Contents</a></li>
+                  <li><a href="#">Feedback</a></li>
                 </ul>
               </li>
               <li>
