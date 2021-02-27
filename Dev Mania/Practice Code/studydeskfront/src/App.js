@@ -4,6 +4,7 @@ import './App.css';
 import NavBar from './components/Navigation/Nav.js';
 import Login from './components/Login/Login.js';
 import Register from './components/Login/Register.js';
+import ShowCourses from './components/showCourses.js';
 
 const ParticleObject = {
 particles: {
@@ -70,11 +71,20 @@ onRouteChange = (route) => {
             :
             <div>
             </div>
-          }
-          {
+            }
+            {
             (this.state.route === 'register' ) ? 
               <div>
                 <Register loadUser = {this.loadUser} onRouteChange = {this.onRouteChange} />
+              </div>
+            :
+            <div>
+            </div>
+            }
+            {
+            (this.state.route === 'showCourses' ) ? 
+              <div>
+                <ShowCourses loadUser = {this.loadUser} onRouteChange = {this.onRouteChange} />
               </div>
             :
             <div>

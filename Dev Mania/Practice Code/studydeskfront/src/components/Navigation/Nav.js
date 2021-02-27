@@ -20,13 +20,15 @@ const Nav = ({ onRouteChange, isSignedIn }) => {
                   <li><a href="#">Share your Story</a></li>
                 </ul>
               </li>
-              <li>
-                <a href="#">Courses</a>
-                <ul class="sub">
+              <li class = "courses">
+                <a href="#"  
+                   onClick = {() => onRouteChange('showCourses')}
+                >Courses</a>
+                {/* <ul class="sub">
                   <li><a href="#">Course A</a></li>
                   <li><a href="#">Course B</a></li>
                   <li><a href="#">Others</a></li>
-                </ul>  
+                </ul>   */}
               </li>
               <li>
                 <a href="#">About us</a>
@@ -61,28 +63,30 @@ const Nav = ({ onRouteChange, isSignedIn }) => {
               </li>
               <li>
                 <a href="#">Blog</a>
-                <ul class="sub">
+                {/* <ul class="sub">
                   <li><a href="#">Others' Story</a></li>
                   <li><a href="#">Share your Story</a></li>
-                </ul>
+                </ul> */}
               </li>
-              <li>
-                <a href="#">Courses</a>
-                <ul class="sub">
+              <li class = "courses">
+                <a href="#"  
+                   onClick = {() => onRouteChange('showCourses')}
+                >Courses</a>
+                {/* <ul class="sub">
                   <li><a href="#">Course A</a></li>
                   <li><a href="#">Course B</a></li>
                   <li><a href="#">Others</a></li>
-                </ul>  
+                </ul>   */}
               </li>
               <li>
                 <a href="#">About Us</a>
               </li>
               <li>
                 <a href="#">Contact</a>
-                <ul class="sub">
+                {/* <ul class="sub">
                   <li><a href="#">Email</a></li>
                   <li><a href="#">Phone</a></li>
-                </ul>  
+                </ul>   */}
               </li>
               <li class = "sign">
                 <a href="#">Sign In</a>
