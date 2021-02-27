@@ -33,7 +33,7 @@ class Login extends React.Component {
       })
       .then(response => response.json())
       .then(user => {
-        if(user.id)
+        if(user.name)
         {
              this.props.loadUser(user)
             this.props.onRouteChange('signedIn');

@@ -21,11 +21,11 @@ const initialState = {
     route: '',
       isSignedIn: false,
       user: {
-        id: '',
+       // id: '',
         name: '',
         email: '',
-        entries: 0,
-        joined: ''
+      //  entries: 0,
+      //  joined: ''
 }
 }
 
@@ -37,11 +37,11 @@ class App  extends Component {
 
   loadUser = (data) => {
     this.setState({ user: {
-          id: data.id,
+        //  id: data.id,
           name: data.name,
           email: data.email,
-          entries: data.entries,
-          joined: data.joined
+        //  entries: data.entries,
+        //  joined: data.joined
         }
     })
   }
@@ -80,6 +80,7 @@ onRouteChange = (route) => {
             <div>
             </div>
             }
+          
     </div>
   );
 }

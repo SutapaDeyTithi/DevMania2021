@@ -14,22 +14,22 @@ const Nav = ({ onRouteChange, isSignedIn }) => {
                 <a href="#">Home</a>
               </li>
               <li>
-                <a href="#">Level/Term</a>
+                <a href="#">Blog</a>
                 <ul class="sub">
-                  <li><a href="#">Contents</a></li>
-                  <li><a href="#">Feedback</a></li>
+                  <li><a href="#">Others' Story</a></li>
+                  <li><a href="#">Share your Story</a></li>
                 </ul>
               </li>
               <li>
-                <a href="#">About us</a>
+                <a href="#">Courses</a>
                 <ul class="sub">
-                  <li><a href="#">Inspiration</a></li>
-                  <li><a href="#">Contributors</a></li>
+                  <li><a href="#">Course A</a></li>
+                  <li><a href="#">Course B</a></li>
                   <li><a href="#">Others</a></li>
                 </ul>  
               </li>
               <li>
-                <a href="#">Get Help</a>
+                <a href="#">About us</a>
               </li>
               <li>
                 <a href="#">Contact</a>
@@ -60,22 +60,22 @@ const Nav = ({ onRouteChange, isSignedIn }) => {
                 <a href="#">Home</a>
               </li>
               <li>
-                <a href="#">Stories</a>
+                <a href="#">Blog</a>
                 <ul class="sub">
                   <li><a href="#">Others' Story</a></li>
                   <li><a href="#">Share your Story</a></li>
                 </ul>
               </li>
               <li>
-                <a href="#">About us</a>
+                <a href="#">Courses</a>
                 <ul class="sub">
-                  <li><a href="#">Inspiration</a></li>
-                  <li><a href="#">Contributors</a></li>
+                  <li><a href="#">Course A</a></li>
+                  <li><a href="#">Course B</a></li>
                   <li><a href="#">Others</a></li>
                 </ul>  
               </li>
               <li>
-                <a href="#">Get Help</a>
+                <a href="#">About Us</a>
               </li>
               <li>
                 <a href="#">Contact</a>
