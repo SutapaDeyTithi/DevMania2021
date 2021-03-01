@@ -7,11 +7,13 @@ var bcrypt = require('bcrypt-nodejs');
 
 const register = require('./controllers/register');
 const signin = require('./controllers/signin');
+const sendFileList = require('./controllers/sendFilelist');
 
 //file upload
 const multer = require('multer');
 const uuid = require('uuid').v4; //adds a hash with the filename; didn't use it 
 const path =  require('path');
+const fs = require('fs');
 
 
 const db = knex({
@@ -92,7 +94,12 @@ app.post('/upload', upload.array('avatar'), (req, res) => {
   return res.json({ status: 'OK', uploaded: req.files.length });
 });
 
+
+
+
+app.get('/getFileList', (req, res) => { sendFileList.sendFileList(req, res) })
+
 // process.env.PORT
 app.listen(3000, () => 
-  console.log('Example app listening on port 3000',)
+  console.log('Example app is listening on port 3000',)
 )

@@ -7,6 +7,10 @@ import Register from './components/Login/Register.js';
 import ShowCourses from './components/showCourses.js';
 import HandleCourses from './components/HandleCourses/handleCourses.js';
 import Upload from './components/UploadContent/upload.js';
+//import CourseContent from './components/CourseContent/courseContent.js';
+import ShowFileList from './components/CourseContent/showFileList.js';
+
+
 
 const ParticleObject = {
 particles: {
@@ -23,6 +27,7 @@ particles: {
 const initialState = {
     route: '',
       isSignedIn: false,
+      fileList: '',
       user: {
        // id: '',
         name: '',
@@ -56,6 +61,10 @@ onRouteChange = (route) => {
     this.setState({ isSignedIn: true });
   else if(route === 'signout')
     this.setState(initialState);
+}
+
+setFileList = (list) => {
+  this.setState({ fileList: list });
 }
 /* sign in  and log in are to be considered similar here */
   render(){
@@ -95,7 +104,16 @@ onRouteChange = (route) => {
             {
             (this.state.route === 'handleCourses' ) ? 
               <div>
-                <HandleCourses loadUser = {this.loadUser} onRouteChange = {this.onRouteChange} />
+                <HandleCourses loadUser = {this.loadUser} onRouteChange = {this.onRouteChange} setFileList = {this.setFileList} />
+              </div>
+            :
+            <div>
+            </div>
+            }
+            { (this.state.route === 'showFileList' ) ? 
+              <div>
+                <ShowFileList loadUser = {this.loadUser} onRouteChange = {this.onRouteChange} fileList = {this.fileList}/>
+                {/* <ShowFileList loadUser = {this.loadUser} onRouteChange = {this.onRouteChange} /> */}
               </div>
             :
             <div>
@@ -109,7 +127,7 @@ onRouteChange = (route) => {
             :
             <div>
             </div>
-            }
+            }       
           
     </div>
   );
