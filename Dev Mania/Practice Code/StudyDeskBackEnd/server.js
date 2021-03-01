@@ -1,5 +1,5 @@
 const express = require('express')
-const app = express()
+const app = express();
 var bodyParser = require('body-parser')
 var cors = require('cors')
 var knex = require('knex')
@@ -7,6 +7,12 @@ var bcrypt = require('bcrypt-nodejs');
 
 const register = require('./controllers/register');
 const signin = require('./controllers/signin');
+
+//file upload
+const multer = require('multer');
+const uuid = require('uuid').v4; //adds a hash with the filename; didn't use it 
+const path =  require('path');
+
 
 const db = knex({
   client: 'pg',
@@ -18,9 +24,30 @@ const db = knex({
   }
 });
 
+//console.log(db.select('*').from('users'));
+
+//file upload
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+      cb(null, 'uploads')
+  },
+  filename: (req, file, cb) => {
+      const { originalname } = file;
+      const filePath = `uploads/${originalname}`;
+      console.log(filePath);
+      cb(null, originalname);
+  }
+})
+
+const upload = multer({ storage }); 
+
 
 app.use(cors());
 app.use(bodyParser.json());
+
+//file upload
+app.use(express.static('public'));
+
 app.get('/', (req, res) => res.send('Hello World!'))
 
 app.post('/signin', (req, res) => { signin.handleSignin(req, res, db, bcrypt) })
@@ -28,6 +55,8 @@ app.post('/signin', (req, res) => { signin.handleSignin(req, res, db, bcrypt) })
 /********* in front end, there is no prompt for duplicate email but no registration/insertion happens in database **********/
 /********* in front end, there is no conditioning yet for this issue **********/
 app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) })
+
+app.post('/showfiles', (req, res) => { filestore.handleFiledb(req, res, db, bcrypt) })
 
 app.get('/profile/:id', (req, res) => {
  const { id } = req.params;
@@ -55,7 +84,15 @@ app.put('/post', (req, res) => {
   .catch(err => res.status(404).json('not found user'));
 })
 
+app.get('/file', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+})
+
+app.post('/upload', upload.array('avatar'), (req, res) => {
+  return res.json({ status: 'OK', uploaded: req.files.length });
+});
+
 // process.env.PORT
 app.listen(3000, () => 
   console.log('Example app listening on port 3000',)
-  )
+)

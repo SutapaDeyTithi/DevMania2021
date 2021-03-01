@@ -5,6 +5,8 @@ import NavBar from './components/Navigation/Nav.js';
 import Login from './components/Login/Login.js';
 import Register from './components/Login/Register.js';
 import ShowCourses from './components/showCourses.js';
+import HandleCourses from './components/HandleCourses/handleCourses.js';
+import Upload from './components/UploadContent/upload.js';
 
 const ParticleObject = {
 particles: {
@@ -85,6 +87,24 @@ onRouteChange = (route) => {
             (this.state.route === 'showCourses' ) ? 
               <div>
                 <ShowCourses loadUser = {this.loadUser} onRouteChange = {this.onRouteChange} />
+              </div>
+            :
+            <div>
+            </div>
+            }
+            {
+            (this.state.route === 'handleCourses' ) ? 
+              <div>
+                <HandleCourses loadUser = {this.loadUser} onRouteChange = {this.onRouteChange} />
+              </div>
+            :
+            <div>
+            </div>
+            }
+            {
+            (this.state.route === 'upload' ) ? 
+              <div>
+                <Upload loadUser = {this.loadUser} onRouteChange = {this.onRouteChange} />
               </div>
             :
             <div>
