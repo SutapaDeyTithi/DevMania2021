@@ -11,7 +11,8 @@ const Nav = ({ onRouteChange, isSignedIn }) => {
           <nav>
             <ul class="primary">
               <li>
-                <a href="#">Home</a>
+                <a href="#" 
+                onClick = {() => onRouteChange('showHome')}>Home</a>
               </li>
               <li>
                 <a href="#">Blog</a>
@@ -58,8 +59,9 @@ const Nav = ({ onRouteChange, isSignedIn }) => {
           <span class="decor"></span>
           <nav>
             <ul class="primary">
-              <li>
-                <a href="#">Home</a>
+            <li>
+                <a href="#" 
+                onClick = {() => onRouteChange('showHome')}>Home</a>
               </li>
               <li>
                 <a href="#">Blog</a>

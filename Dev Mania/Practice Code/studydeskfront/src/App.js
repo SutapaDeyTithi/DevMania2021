@@ -7,9 +7,9 @@ import Register from './components/Login/Register.js';
 import ShowCourses from './components/showCourses.js';
 import HandleCourses from './components/HandleCourses/handleCourses.js';
 import Upload from './components/UploadContent/upload.js';
-//import CourseContent from './components/CourseContent/courseContent.js';
+import Home from './components/Navigation/home.js';
 import ShowFileList from './components/CourseContent/showFileList.js';
-import handleCourses from './components/HandleCourses/handleCourses.js';
+//import HandleCourses from './components/HandleCourses/handleCourses.js';
 
 
 
@@ -26,7 +26,8 @@ particles: {
 }
 
 const initialState = {
-    route: '',
+      role: '',
+      route: '',
       isSignedIn: false,
       fileList: '',
       user: {
@@ -64,6 +65,13 @@ onRouteChange = (route) => {
     this.setState(initialState);
 }
 
+setRole = (role) => {
+  if(role === 'admin')
+  {
+    this.setState({ role: 'admin' });
+  }
+}
+
 setFileList = (list) => {
   // console.log("app");
   // console.log(list);
@@ -78,10 +86,11 @@ setFileList = (list) => {
                   params={ ParticleObject }
              />
             <NavBar onRouteChange = { this.onRouteChange } isSignedIn = {  this.state.isSignedIn }/>
+
             {
             (this.state.route === 'login' ) ? 
               <div>
-                <Login loadUser = {this.loadUser} onRouteChange = {this.onRouteChange} />
+                <Login loadUser = {this.loadUser} onRouteChange = {this.onRouteChange} setRole = {this.setRole}/>
               </div>
             :
             <div>
@@ -108,7 +117,7 @@ setFileList = (list) => {
             {
             (this.state.route === 'handleCourses' ) ? 
               <div>
-                <HandleCourses loadUser = {this.loadUser} onRouteChange = {this.onRouteChange} setFileList = {this.setFileList} />
+                <HandleCourses loadUser = {this.loadUser} onRouteChange = {this.onRouteChange} role = {this.state.role} setFileList = {this.setFileList} />
               </div>
             :
             <div>

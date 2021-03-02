@@ -7,7 +7,7 @@ body {
     /*padding:30px 50px;*/
     cursor:pointer;
     color:#FFF;
-    font-size:2em;
+    font-size:1.2em;
     border-radius:4px;
     border:1px solid #bbb;
     transition: all 0.3s linear;
@@ -59,13 +59,13 @@ a {
 /***********************************************************************
  *  Cover
  **********************************************************************/
-.container {
+/* .container {
     /*show heigh: auto*/
-    height: 70vh; 
+    /* height: 70vh; 
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
 .cover {
     width: 30rem;
@@ -162,4 +162,3 @@ footer {
     background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
     background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
 }
-

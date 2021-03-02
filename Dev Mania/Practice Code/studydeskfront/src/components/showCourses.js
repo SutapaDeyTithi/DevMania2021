@@ -10,33 +10,44 @@ const ShowCourses = ({ onRouteChange, isSignedIn }) => {
                 <a href="#"
                 onClick = {() => onRouteChange('handleCourses')}
                 >
-                <div class="box zone"><img src={imgUrl} alt="Paris"/></div>
+                    <div class="box zone"><img src={imgUrl} alt="Paris"/>CSE405</div>
                 </a>
                 <a href="#"
                 onClick = {() => onRouteChange('handleCourses')}
                 >
-                <div class="box zone"><img src={imgUrl} alt="Paris"/></div>
+                <div class="box zone"><img src={imgUrl} alt="Paris"/>CSE409</div>
                 </a>
                 <a href="#"
                 onClick = {() => onRouteChange('handleCourses')}
                 >
-                <div class="box zone"><img src={imgUrl} alt="Paris"/></div>
+                <div class="box zone"><img src={imgUrl} alt="Paris"/>CSE453</div>
                 </a>
                 <a href="#"
                 onClick = {() => onRouteChange('handleCourses')}
                 >
-                <div class="box zone"><img src={imgUrl} alt="Paris"/></div>
+                <div class="box zone"><img src={imgUrl} alt="Paris"/>CSE463</div>
                 </a>
                 <a href="#"
                 onClick = {() => onRouteChange('handleCourses')}
                 >
-                <div class="box zone"><img src={imgUrl} alt="Paris"/></div>
+                <div class="box zone"><img src={imgUrl} alt="Paris"/>CSE400</div>
                 </a>
                 <a href="#"
                 onClick = {() => onRouteChange('handleCourses')}
                 >
-                <div class="box zone"><img src={imgUrl} alt="Paris"/></div>
+                <div class="box zone"><img src={imgUrl} alt="Paris"/>CSE406</div>
                 </a>
+                <a href="#"
+                onClick = {() => onRouteChange('handleCourses')}
+                >
+                <div class="box zone"><img src={imgUrl} alt="Paris"/>CSE408</div>
+                </a>
+                <a href="#"
+                onClick = {() => onRouteChange('handleCourses')}
+                >
+                <div class="box zone"><img src={imgUrl} alt="Paris"/>CSE410</div>
+                </a>
+                
             </div>
          </div>
     );

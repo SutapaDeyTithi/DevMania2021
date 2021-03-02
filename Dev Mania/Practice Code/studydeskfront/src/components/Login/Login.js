@@ -41,8 +41,12 @@ class Login extends React.Component {
       .then(user => {
         if(user.name)
         {
-             this.props.loadUser(user)
-            this.props.onRouteChange('signedIn');
+               this.props.loadUser(user)
+               if(this.state.role === 'admin')
+              {
+                this.props.setRole('admin');
+              }
+              this.props.onRouteChange('signedIn');
         }
     })
   

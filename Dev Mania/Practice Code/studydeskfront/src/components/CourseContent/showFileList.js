@@ -1,5 +1,5 @@
 import React from 'react';
-//import './handleCourses.css';
+import './showFileList.css';
 
 const ShowFileList = ({ onRouteChange, fileList }) => {
     console.log(fileList);
@@ -9,26 +9,15 @@ const ShowFileList = ({ onRouteChange, fileList }) => {
                 {
                     fileList.map(filename =>
                         <li>
-                            <a href="#"
+                            <a href="https://bn.khanacademy.org/" className = "myLink" target="_blank"
                             //onClick = {() => onRouteChange('contenList')}
                             >
-                            {filename}<br></br>
+                            <u>{filename}</u><br></br>
                             </a>
                         </li>)
                 }
                 <br></br>
-            </li>
-            {/* <a href="#"
-            //onClick = {() => onRouteChange('contenList')}
-            >
-                {fileList}
-             
-            </a> */}
-            {/* <a href="#"
-            onClick = {() => onRouteChange('upload')}
-            >
-                <button class="button button1">Upload Content</button>
-            </a> */}
+            </li>       
      </div>
     );
 }
