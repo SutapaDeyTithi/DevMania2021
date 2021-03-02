@@ -7,7 +7,7 @@ import Register from './components/Login/Register.js';
 import ShowCourses from './components/showCourses.js';
 import HandleCourses from './components/HandleCourses/handleCourses.js';
 import Upload from './components/UploadContent/upload.js';
-import Home from './components/Navigation/home.js';
+//import Home from './components/Navigation/home.js';
 import ShowFileList from './components/CourseContent/showFileList.js';
 //import HandleCourses from './components/HandleCourses/handleCourses.js';
 
@@ -86,7 +86,6 @@ setFileList = (list) => {
                   params={ ParticleObject }
              />
             <NavBar onRouteChange = { this.onRouteChange } isSignedIn = {  this.state.isSignedIn }/>
-
             {
             (this.state.route === 'login' ) ? 
               <div>

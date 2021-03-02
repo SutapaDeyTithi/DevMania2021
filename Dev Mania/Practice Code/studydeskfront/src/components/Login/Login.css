@@ -76,7 +76,7 @@
 }
 
 .bg-transparent {
-    background-color: whitesmoke;
+    background-color: transparent;
 }
 
 .hover-white:hover {
@@ -302,6 +302,4 @@
     }
 }
 
-.shadow-5 { box-shadow: 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 );
-    background-color: whitesmoke;
-}
+.shadow-5 { box-shadow: 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 ); }
