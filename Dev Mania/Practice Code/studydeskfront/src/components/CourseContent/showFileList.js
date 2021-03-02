@@ -5,21 +5,30 @@ const ShowFileList = ({ onRouteChange, fileList }) => {
     console.log(fileList);
     return (
         <div>
-        <div class="zone blue grid-wrapper">
-            <a href="#"
+            <li>
+                {
+                    fileList.map(filename =>
+                        <li>
+                            <a href="#"
+                            //onClick = {() => onRouteChange('contenList')}
+                            >
+                            {filename}<br></br>
+                            </a>
+                        </li>)
+                }
+                <br></br>
+            </li>
+            {/* <a href="#"
             //onClick = {() => onRouteChange('contenList')}
             >
-              fdsagh
                 {fileList}
              
-            </a>
+            </a> */}
             {/* <a href="#"
             onClick = {() => onRouteChange('upload')}
             >
                 <button class="button button1">Upload Content</button>
             </a> */}
-            
-        </div>
      </div>
     );
 }

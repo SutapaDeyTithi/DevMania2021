@@ -9,6 +9,7 @@ import HandleCourses from './components/HandleCourses/handleCourses.js';
 import Upload from './components/UploadContent/upload.js';
 //import CourseContent from './components/CourseContent/courseContent.js';
 import ShowFileList from './components/CourseContent/showFileList.js';
+import handleCourses from './components/HandleCourses/handleCourses.js';
 
 
 
@@ -64,7 +65,10 @@ onRouteChange = (route) => {
 }
 
 setFileList = (list) => {
-  this.setState({ fileList: list });
+  // console.log("app");
+  // console.log(list);
+  this.state.fileList = list;
+  // console.log(this.state.fileList);
 }
 /* sign in  and log in are to be considered similar here */
   render(){
@@ -112,7 +116,7 @@ setFileList = (list) => {
             }
             { (this.state.route === 'showFileList' ) ? 
               <div>
-                <ShowFileList loadUser = {this.loadUser} onRouteChange = {this.onRouteChange} fileList = {this.fileList}/>
+                <ShowFileList loadUser = {this.loadUser} onRouteChange = {this.onRouteChange} fileList = {this.state.fileList}/>
                 {/* <ShowFileList loadUser = {this.loadUser} onRouteChange = {this.onRouteChange} /> */}
               </div>
             :

@@ -13,17 +13,14 @@ onClickGetFileList = () => {
     console.log("fetching file list");
     fetch('http://localhost:3000/getFileList', {
       method: 'get',
-      headers: {'Content-Type': 'application/json'}
+      headers: {'Content-Type': 'text/json'}
       })
-      .then(response => {
-         // console.log(response.json())
-         this.props.setFileList(response.json());
-        })
-    //   .then(json => {
-          console.log("hwloo");
-      
-        this.props.onRouteChange('showFileList');
-    // });
+      .then(response => response.json())
+      .then(entity => {
+         this.props.setFileList(entity);
+         //console.log(this.props.fileList);
+         this.props.onRouteChange('showFileList');
+       });
   }
 
   render() {
