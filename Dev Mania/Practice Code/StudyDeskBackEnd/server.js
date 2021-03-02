@@ -8,6 +8,7 @@ var bcrypt = require('bcrypt-nodejs');
 const register = require('./controllers/register');
 const signin = require('./controllers/signin');
 const sendFileList = require('./controllers/sendFilelist');
+const addAdmin = require('./controllers/addAdmin');
 
 //file upload
 const multer = require('multer');
@@ -98,6 +99,8 @@ app.post('/upload', upload.array('avatar'), (req, res) => {
 
 
 app.get('/getFileList', (req, res) => { sendFileList.sendFileList(req, res) })
+
+//addAdmin.addAdmin(db, bcrypt);
 
 // process.env.PORT
 app.listen(3000, () => 

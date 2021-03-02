@@ -8,7 +8,8 @@ class Login extends React.Component {
     super(props);
     this.state = {
       signInEmail: '',
-      signInPassword: ''
+      signInPassword: '',
+      role: ''
     }
   }
 
@@ -20,6 +21,10 @@ class Login extends React.Component {
     this.setState({signInPassword: event.target.value})
   }
 
+  onRoleChange = (event) => {
+    this.setState({role: event.target.value})
+  }
+
   onSubmitSignIn = () => {
     console.log(this.state.signInEmail);
     console.log(this.state.signInPassword);
@@ -28,7 +33,8 @@ class Login extends React.Component {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         email: this.state.signInEmail,
-        password: this.state.signInPassword
+        password: this.state.signInPassword,
+        role: this.state.role
       })
       })
       .then(response => response.json())
@@ -70,6 +76,17 @@ class Login extends React.Component {
                   onChange={this.onPasswordChange}
                 />
               </div>
+
+              <p>Please select your role:</p>
+              <input type="radio" id="admin" name="role" value="admin"
+                onChange={this.onRoleChange}
+              />
+              <label for="admin">Admin</label><br></br>
+              <input type="radio" id="user" name="role" value="user"
+                onChange={this.onRoleChange}
+              />
+              <label for="user">User</label><br></br>
+
             </fieldset>
             <div className="">
               <input
